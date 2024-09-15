@@ -12,21 +12,23 @@
     <thead>
     <tr>
         <th scope="col">ID</th>
-        <th scope="col">Title</th>
-        <th scope="col">Content</th>
+        <th scope="col">email</th>
+        <th scope="col">password</th>
+        <th scope="col">edit</th>
     </tr>
     </thead>
     <tbody>
-    {{#article}}
+    {{#member}}
     <tr>
         <th>{{id}}</th>
-        <td>{{title}}</td>
-        <td>{{content}}</td>
+        <td>{{email}}</td>
+        <td>{{password}}</td>
+        <td><a href="/members/{{id}}/edit" class="btn btn-primary">수정하기</a></td>
     </tr>
-    {{/article}}
+    {{/member}}
     </tbody>
 </table>
-
+<a href="/members">Go to memberList</a>
 <!-- content -->
 {{>layout/footer}}
 </body>

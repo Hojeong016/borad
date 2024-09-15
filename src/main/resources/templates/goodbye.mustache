@@ -5,6 +5,13 @@
     <title>Document</title>
 </head>
 <body>
-<h1>{{username}}님, 감사합니다.</h1>
+{{>layout/header}}
+
+<!-- content -->
+<div class="bg-dark text-white p-5">
+    <h1>{{username}}님, 다음에 또 만나요.</h1>
+</div>
+<!-- content -->
+{{>layout/footer}}
 </body>
 </html>

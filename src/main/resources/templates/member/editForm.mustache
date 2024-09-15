@@ -8,21 +8,21 @@
 {{>layout/header}}
 
 <!-- content -->
-{{#article}}
-<form class="container" action="/articles/update" method="post">
+{{#memberUp}}
+<form class="container" action="/members/update" method="post">
     <input name="id" type="hidden" value="{{id}}">
     <div class="mb-3">
-        <label  class="form-label">제목</label>
-        <input type="text" class="form-control" name="title" value="{{title}}">
+        <label for="exampleInputEmail1" class="form-label">email</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" value="{{email}}">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
     </div>
     <div class="mb-3">
-        <label  class="form-label">내용</label>
-        <textarea class="form-control" rows="3" name="content">{{content}}</textarea>
+        <label for="exampleInputPassword1" class="form-label">password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name="password" value="{{password}}">
     </div>
-    <button type="submit" class="btn btn-primary">제출</button>
-    <a href="/articles/{id}">Back</a>
+    <button type="submit" class="btn btn-primary">수정하기</button>
 </form>
-{{/article}}
+{{/memberUp}}
 <!-- content -->
 {{>layout/footer}}
 </body>
